@@ -1,0 +1,30 @@
+{
+  "name": "jsonresume-theme-claude",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "A JSON Resume theme designed and built entirely by Claude Code in the terminal",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js"
+  },
+  "scripts": {
+    "render": "node -e \"import {readFile,writeFile} from 'fs/promises'; import {render} from './index.js'; writeFile('resume.html', render(JSON.parse(await readFile('resume.json','utf-8'))));\""
+  },
+  "keywords": [
+    "jsonresume",
+    "jsonresume-theme",
+    "resume",
+    "cv",
+    "claude",
+    "ai"
+  ],
+  "author": "Roland Sharp <rolandnsharp@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rolandnsharp/jsonresume-theme-claude"
+  },
+  "dependencies": {
+    "markdown-it": "^14.1.1"
+  }
+}
